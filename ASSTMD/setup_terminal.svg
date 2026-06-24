@@ -81,7 +81,7 @@
         </div>
         
         <div>
-          <span class="prompt">PS C:\SmartAC&gt;</span><span class="line type1">install.bat</span><div class="cursor cursor-hide"></div>
+          <span class="prompt">PS C:\SmartAC&gt;</span><span class="line type1">./install.bat</span><div class="cursor cursor-hide"></div>
         </div>
         
         <div class="out1">

@@ -25,7 +25,7 @@ Untuk memulai instalasi otomatis, jalankan file instalasi sesuai sistem operasi 
 
 **Windows:**
 ```bash
-install.bat
+./install.bat
 ```
 
 **Linux/Mac:**

@@ -45,8 +45,8 @@
           <div class="line" style="animation-delay: 0.2s"><span class="ln">12</span><span class="comment">// ==========================================</span></div>
           <div class="line" style="animation-delay: 0.4s"><span class="ln">13</span><span class="comment">// KONFIGURASI WIFI</span></div>
           <div class="line" style="animation-delay: 0.6s"><span class="ln">14</span><span class="comment">// ==========================================</span></div>
-          <div class="line" style="animation-delay: 1s"><span class="ln">15</span><span class="keyword">const</span> <span class="type">char</span>* ssid = <span class="string">"Home_Network_5G"</span>;</div>
-          <div class="line" style="animation-delay: 1.5s"><span class="ln">16</span><span class="keyword">const</span> <span class="type">char</span>* password = <span class="string">"SecretPass123"</span>;<span class="cursor"></span></div>
+          <div class="line" style="animation-delay: 1s"><span class="ln">15</span><span class="keyword">const</span> <span class="type"> char</span>* ssid = <span class="string">"Home_Network_2.5Ghz"</span>;</div>
+          <div class="line" style="animation-delay: 1.5s"><span class="ln">16</span><span class="keyword">const</span> <span class="type"> char</span>* password = <span class="string">"SecretPass123"</span>;<span class="cursor"></span></div>
         </div>
         <div class="status-bar">
           <span>Arduino Uno R4 WiFi | Line 16, Col 43</span>

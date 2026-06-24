@@ -19,7 +19,7 @@ Jalankan skrip instalasi otomatis di terminal proyek Anda:
 
 **Windows:**
 ```bash
-install.bat
+./install.bat
 ```
 
 **Linux/Mac:**

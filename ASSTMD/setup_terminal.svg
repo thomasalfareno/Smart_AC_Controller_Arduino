@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 350" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
+        .terminal-window {
+          background-color: #0d1117;
+          border: 1px solid #30363d;
+          border-radius: 12px;
+          font-family: 'Fira Code', monospace;
+          font-size: 11.5px;
+          color: #c9d1d9;
+          padding: 15px;
+          box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+          height: 340px;
+          box-sizing: border-box;
+          position: relative;
+        }
+        .header {
+          display: flex; justify-content: space-between; align-items: center; 
+          margin-bottom: 12px; border-bottom: 1px solid #30363d; padding-bottom: 10px;
+        }
+        .dots { display: flex; gap: 6px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+        .title { font-size: 11px; color: #8b949e; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .line { display: inline-block; vertical-align: middle; white-space: nowrap; overflow: hidden; }
+        .prompt { color: #3fb950; font-weight: bold; margin-right: 8px; }
+        
+        /* Step 1: Type the command */
+        .type1 { width: 0; animation: t1 12s steps(20) infinite; color: #f2cc60; }
+        @keyframes t1 { 0%, 5% { width: 0; } 12%, 100% { width: 100px; } }
+        
+        /* Output 1: Header and pip install */
+        .out1 { opacity: 0; animation: o1 12s forwards infinite; margin-top: 8px; line-height: 1.5; color: #8b949e; }
+        @keyframes o1 { 0%, 13% { opacity: 0; } 13.1%, 100% { opacity: 1; } }
+
+        /* Output 2: pip download simulation */
+        .out2 { opacity: 0; animation: o2 12s forwards infinite; color: #c9d1d9; font-size: 11px; margin-bottom: 8px;}
+        @keyframes o2 { 0%, 25% { opacity: 0; } 25.1%, 100% { opacity: 1; } }
+
+        /* Output 3: pyaudio checking */
+        .out3 { opacity: 0; animation: o3 12s forwards infinite; color: #8b949e; margin-bottom: 4px;}
+        @keyframes o3 { 0%, 40% { opacity: 0; } 40.1%, 100% { opacity: 1; } }
+        
+        /* Output 4: pyaudio success */
+        .out4 { opacity: 0; animation: o4 12s forwards infinite; color: #3fb950; font-weight: 600; margin-bottom: 8px; font-size: 11px;}
+        @keyframes o4 { 0%, 55% { opacity: 0; } 55.1%, 100% { opacity: 1; } }
+
+        /* Output 5: Config creation */
+        .out5 { opacity: 0; animation: o5 12s forwards infinite; color: #8b949e; }
+        @keyframes o5 { 0%, 65% { opacity: 0; } 65.1%, 100% { opacity: 1; } }
+        
+        /* Output 6: Config success */
+        .out6 { opacity: 0; animation: o6 12s forwards infinite; color: #a5d6ff; font-weight: bold; margin-bottom: 12px; font-size: 11px;}
+        @keyframes o6 { 0%, 75% { opacity: 0; } 75.1%, 100% { opacity: 1; } }
+
+        /* Step 2: Final prompt */
+        .final-prompt { opacity: 0; animation: fp 12s forwards infinite; }
+        @keyframes fp { 0%, 85% { opacity: 0; } 85.1%, 100% { opacity: 1; } }
+
+        .cursor { display: inline-block; width: 6px; height: 14px; background-color: #c9d1d9; vertical-align: middle; margin-left: 4px; animation: blink 1s step-end infinite; }
+        .cursor-hide { animation: blink-hide 12s forwards infinite; }
+        
+        @keyframes blink { 50% { opacity: 0; } }
+        @keyframes blink-hide { 0%, 13% { opacity: 1; } 13.1%, 100% { opacity: 0; display:none; } }
+      </style>
+      <div class="terminal-window">
+        <div class="header">
+          <div class="dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="title">
+            powershell — installer
+          </div>
+        </div>
+        
+        <div>
+          <span class="prompt">PS C:\SmartAC&gt;</span><span class="line type1">install.bat</span><div class="cursor cursor-hide"></div>
+        </div>
+        
+        <div class="out1">
+          <span style="color:#8b949e;">========================================</span><br/>
+          <span style="color:#c9d1d9; font-weight:bold;">Smart AC Voice Controller - Setup Script</span><br/>
+          <span style="color:#8b949e;">========================================</span><br/><br/>
+          <span style="color:#79c0ff;">[1/3]</span> Mengunduh pustaka Python (google-generativeai, Pillow)...
+        </div>
+
+        <div class="out2">
+          <span style="color: #4ade80;">✔</span> Dependensi berhasil diverifikasi. [Selesai dalam 1.2s]
+        </div>
+
+        <div class="out3">
+          <span style="color:#79c0ff;">[2/3]</span> Mendeteksi modul audio (PyAudio) pada Windows...
+        </div>
+
+        <div class="out4">
+          <span style="color: #4ade80;">✔</span> PyAudio aktif dan mendengarkan input mikrofon!
+        </div>
+
+        <div class="out5">
+          <span style="color:#79c0ff;">[3/3]</span> Menghasilkan struktur file environment...
+        </div>
+
+        <div class="out6">
+          ✨ File .env berhasil dibuat. Silakan tambahkan API Key Anda.
+        </div>
+
+        <div class="final-prompt">
+          <span class="prompt">PS C:\SmartAC&gt;</span><div class="cursor"></div>
+        </div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
